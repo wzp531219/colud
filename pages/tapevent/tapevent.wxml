@@ -1,0 +1,6 @@
+<!--pages/tapevent/tapevent.wxml-->
+<!-- <text>pages/tapevent/tapevent.wxml</text> -->
+<button type="primary" bindtap="scrollToPosition">滚动到页面指定位置</button>
+<view class="pagetop" style="background-color:#333;width:100%;height:400px"></view>
+<button type="primary" bindtap="scrollToTop">滚动到页面顶部（返回顶部）</button>
+<view id="pageblock" style="background-color:#333;width:100%;height:400px"></view>

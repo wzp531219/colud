@@ -1,0 +1,9 @@
+<!--pages/common/head.wxml-->
+<!-- <text>pages/common/head.wxml</text> -->
+<template name="head">
+  <view class="page-head">
+    <view class="page-head-title">{{title}}</view>
+    <view class="page-head-line">方法</view>
+    <view wx:if="{{desc}}" class="page-head-desc">{{desc}}</view>
+  </view>
+</template>

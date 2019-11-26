@@ -1,0 +1,31 @@
+/* pages/animation/animation.wxss */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: 4s linear 0s infinite alternate fadeIn;
+}
+
+@keyframes shake {
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(30px, 0, 0);
+  }
+}
+
+.shake{
+  /* -webkit-animation-name: shake; */
+  animation-name: shake;
+  animation: 2s linear 0s infinite alternate shake;
+}
