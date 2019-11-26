@@ -1,0 +1,43 @@
+<!--pages/partner/partner.wxml-->
+<!-- <text>pages/partner/partner.wxml</text> -->
+<view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__bd" wx:for="{{moviesList}}" wx:for-item="moviesList" wx:key="*item">
+            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" mode="widthFix" src="{{moviesList.img}}" sytle="height:auto"></image>
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">{{moviesList.name}}</view>
+                    <view class="weui-media-box__desc">{{moviesList.desc}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<view class="movie">
+  <image mode="widthFix" src="{{movie.img}}" style="width:300rpx"></image>
+  <view>电影名：{{movie.name}}</view>
+  <view>英文名：{{movie.englishname}}</view>
+  <view>国家：{{movie.country}}</view>
+  <view>发行年份：{{movie.year}}</view>
+  <view>简述：{{movie.desc}}</view>
+</view>
+
+<view class="movie">
+  <view>豆瓣电影排名第2、最重要的主演演员名：</view>
+  <view>{{movies[1].actor[0].name}}</view>
+  <image mode="widthFix" src="{{movies[1].img}}" style="width:300rpx"></image>
+  <view>电影名：{{movies[1].name}}</view>
+  <view>英文名：{{movies[1].englishname}}</view>
+  <view>发行地：{{movies[1].country}}</view>
+  <view>发行年份：{{movies[1].year}}</view>
+  <view>简述：{{movies[1].desc}}</view>
+</view>
+<view class="task">小任务：输入以下代码会是什么结果？为什么不能这样？</view>
+<view class="movie">
+  <view>{{movies}}</view>
+  <view>{{movies[1]}}</view>
+  <view>{{movies[1].actor}}</view>
+  <view>movies是个数组movies[1]是个对象movies[1].actor也是个数组所以页面展示的是数组里面包含的对象</view>
+</view>

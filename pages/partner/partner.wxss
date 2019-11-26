@@ -1,0 +1,14 @@
+/* pages/partner/partner.wxss */
+/* page {
+  background-image: url(https://tcb-1251009918.cos.ap-guangzhou.myqcloud.com/background.jpg);
+} */
+.movie{
+  padding: 20rpx;
+}
+.task{
+  padding: 20rpx;
+  color: #1772cb;
+}
+.weui-media-box__hd_in-appmsg{
+  height: auto;
+}

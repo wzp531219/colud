@@ -1,0 +1,4 @@
+/* pages/more/more.wxss */
+.weui-grid{
+  width: 20%;
+}
