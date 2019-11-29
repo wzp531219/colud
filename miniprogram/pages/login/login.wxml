@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<!-- <text>pages/login/login.wxml</text> -->
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfomation">点击获取用户信息</button>
+<view class="fx">
+  <view class="avatarBox">
+    <image class="avatarIcon" src="{{avatarUrl}}"></image>
+  </view>
+  <view class="userInfo">
+    <view>{{city}}</view>
+    <view>{{nickName}}</view>
+  </view>
+</view>
