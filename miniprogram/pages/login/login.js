@@ -8,6 +8,7 @@ Page({
     avatarUrl: '/images/user-unlogin.png',
     nickName: "用户未登陆",
     city: "未知",
+    imgurl: "",
   },
   getUserInfomation: function (event) {
     console.log('getUserInfomation打印的事件对象', event)
@@ -17,6 +18,32 @@ Page({
     avatarUrl = avatarUrl.join('/');
     this.setData({
       avatarUrl, city, nickName
+    })
+  },
+  chooseImg: function () {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['compressed'],
+      sourceType: ['album', 'camera'],
+      success:  (res)=> {
+        console.log(res)
+        const filePath = res.tempFilePaths[0];
+        // const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0];
+
+        const cloudPath = `cloudbase/${Date.now()}-${Math.floor(Math.random(0, 1) * 1000)}` + filePath.match(/\.[^.]+?$/)[0];
+        wx.cloud.uploadFile({
+          cloudPath,
+          filePath,
+          success: res => {
+            console.log('上传成功后获得的res：', res)       
+            const imgurl = res.fileID
+            this.setData({
+              imgurl
+            })
+          },
+        })
+        console.log(res.tempFilePaths)
+      }
     })
   },
   /**

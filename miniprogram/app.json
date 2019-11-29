@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/home/home",
     "pages/request/request",
     "pages/story/story",
@@ -20,7 +19,11 @@
     "pages/common/head",
     "pages/common/foot",
     "pages/apidata/apidata",
-    "pages/location/location"
+    "pages/location/location",
+    "pages/utils/utils",
+    "pages/login/login",
+    "pages/data/data"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

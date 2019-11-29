@@ -1,4 +1,5 @@
 // pages/file/file.js
+const util = require('../utils/utils.js')
 Page({
 
   /**
@@ -18,6 +19,32 @@ Page({
       width: 50,
       height: 50
     }],
+    tempFilePath: '',
+    savedFilePath: '',
+    logs: []
+  },
+  chooseImage: function () {
+    const that = this
+    wx.chooseImage({
+      count: 1,
+      success(res) {
+        that.setData({
+          tempFilePath: res.tempFilePaths[0]
+        })
+      }
+    })
+  },
+  saveImage: function () {
+    const that = this
+    wx.saveFile({
+      tempFilePath: this.data.tempFilePath,
+      success(res) {
+        that.setData({
+          savedFilePath: res.savedFilePath
+        })
+        wx.setStorageSync('savedFilePath', res.savedFilePath)
+      },
+    })
   },
   chooseLocation: function () {
     let that = this
@@ -90,7 +117,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      logs: (wx.getStorageSync('logs') || []).map(log => {
+        return util.formatTime(new Date(log))
+      })
+    })
+    console.log('未格式化的时间', new Date())
+    console.log('格式化后的时间', util.formatTime(new Date()))
+    console.log('格式化后的数值', util.formatNumber(9));
+    console.log('2019年9月2日map处理后的结果', [2019, 9, 2].map(util.formatNumber))
+    console.log('上午9点13分4秒map处理后的结果', [9, 13, 4].map(util.formatNumber))
+    this.setData({
+      savedFilePath: wx.getStorageSync('savedFilePath')
+    })
   },
 
   /**

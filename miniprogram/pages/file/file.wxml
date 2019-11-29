@@ -4,6 +4,16 @@
 <view wx:if="{{!!imgurl}}">
     <image mode="widthFix" src="{{imgurl}}"></image>
 </view> -->
+<view wx:for="{{logs}}" wx:for-item="log" wx:key="item">
+  <view>{{index + 1}}. {{log}}</view>
+</view>
+<view>临时文件的图片</view>
+<image mode="widthFix" src="{{tempFilePath}}" style="width:100px"></image>
+<view>缓存保存的图片</view>
+<image mode="widthFix" src="{{savedFilePath}}" style="width:100px"></image>
+<button bindtap="chooseImage">请选择文件</button>
+<button bindtap="saveImage">保存文件到缓存</button>
+<button bindtap="chooseFile">选择文件</button>
 <button bindtap="chooseFile">选择文件</button>
 <view wx:for-items="{{tempFiles}}" wx:for-item="item" wx:key="*this">
   <view>{{item.path}}</view>
