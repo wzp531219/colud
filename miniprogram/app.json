@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/request/request",
+    "pages/story/story",
+    "pages/file/file",
+    "pages/form/form",
+    "pages/user/user",
+    "pages/home/imgshow/imgshow",
+    "pages/logs/logs",
+    "pages/partner/partner",
+    "pages/more/more",
+    "pages/mine/mine",
+    "pages/list/list",
+    "pages/gradient/gradient",
+    "pages/filter/filter",
+    "pages/transform/transform",
+    "pages/animation/animation",
+    "pages/common/head",
+    "pages/common/foot",
+    "pages/apidata/apidata",
+    "pages/location/location"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1772cb",
+    "navigationBarTitleText": "云开发训练营",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#1772cb"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1772cb",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "images/act.png",
+        "selectedIconPath": "images/act_active.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/partner/partner",
+        "iconPath": "images/partner.png",
+        "selectedIconPath": "images/partner_active.png",
+        "text": "伙伴"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "iconPath": "images/more.png",
+        "selectedIconPath": "images/more_active.png",
+        "text": "更多"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

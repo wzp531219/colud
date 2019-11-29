@@ -1,0 +1,10 @@
+<!--pages/location/location.wxml-->
+<!-- <text>pages/location/location.wxml</text> -->
+<view>
+  {{location.address}}
+</view>
+<view>{{location.formatted_addresses.recommend}}</view>
+<view>{{location.address_component.nation}}</view>
+<view>{{location.address_component.province}}</view>
+<view>{{location.address_component.city}}</view>
+<view>{{location.address_reference.business_area.title}}</view>

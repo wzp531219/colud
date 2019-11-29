@@ -1,0 +1,14 @@
+<view id="imgsection">
+  <view class="title">小程序显示图片</view>
+
+  <button bindtap="navigateBack">返回上一页</button>
+  <view class="imglist">
+    <image class="imgitem" src="https://777a-wzp-nouoh-1300726591.tcb.qcloud.la/daoxiang.jpg?sign=baca0391a3809a15c3e304a08a5cbf15&t=1574993696" mode="widthFix"></image>
+  </view>
+  <view class="imglist">
+    <!-- <image class="imgfull" src="https://wzp-bucket-1300726591.cos.ap-beijing.myqcloud.com/5d1dc48ae4b0487711092b43.jpg" mode="center"></image> -->
+  </view>
+  <view class="imglist">
+    <image class="circle" mode="widthFix" src="https://hackwork.oss-cn-shanghai.aliyuncs.com/lesson/weapp/4/logo.jpg"></image>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#1772cb",
+  "navigationBarTitleText": "点击事件",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#1772cb"
+}

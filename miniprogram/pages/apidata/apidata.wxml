@@ -1,0 +1,12 @@
+<!--pages/apidata/apidata.wxml-->
+<!-- <text>pages/apidata/apidata.wxml</text> -->
+<view>
+  <block wx:for="{{heWeather6}}" wx:key="*this">
+    <view>{{item.basic.cnty}}</view>
+    <view>{{item.basic.location}}</view>
+    <view>{{item.update.utc}}</view>
+    <view>{{item.update.loc}}</view>
+    <view>{{item.now.cond_txt}}</view>
+    <view>{{item.now.wind_dir}}</view>
+  </block>
+</view>

@@ -1,0 +1,20 @@
+/* pages/request/request.wxss */
+.list-item {
+  background-color: #82c2f7;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: 1px solid #bdd2f8;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.list-item {
+  flex: 1;
+}
+
+.hw__h3 {
+  color: #1772cb;
+}

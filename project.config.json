@@ -3,6 +3,8 @@
 	"packOptions": {
 		"ignore": []
 	},
+	"cloudfunctionRoot": "cloudfunctions/",
+	"miniprogramRoot": "miniprogram/",
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
@@ -30,6 +32,7 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -39,13 +42,42 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/apidata/apidata",
+					"pathName": "pages/apidata/apidata",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/request/request",
+					"pathName": "pages/request/request",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/location/location",
+					"pathName": "pages/location/location",
+					"scene": null
+				}
+			]
 		}
 	}
 }
