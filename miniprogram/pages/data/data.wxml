@@ -37,5 +37,5 @@
 <view style="background-color:{{bgcolor}};width:400rpx;height:300rpx;"></view>
 <button bindtap="redTap">让背景变红</button>
 <button bindtap="yellowTap">让背景变黄</button>
-<view style="background-color:{{bgcolor}};width:400rpx;height:300rpx;"></view>
-<button bindtap="translateEvent">旋转45°</button>
+<image src="/images/1.jpg" class='{{imgTran}}'></image>
+<button bindtap="translateEvent">旋转90°</button>

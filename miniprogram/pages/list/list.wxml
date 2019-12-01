@@ -34,6 +34,9 @@
 <view class='list-item'>
     <navigator url="../form/form" class="item-link">表单数据</navigator>
   </view>
+  <view class='list-item'>
+    <navigator url="../lifecyle/lifecyle" class="item-link">生命周期</navigator>
+  </view>
 <view class='list-item'>
   <navigator url="../file/file" class="item-link">图片、缓存与文件</navigator>
 </view>

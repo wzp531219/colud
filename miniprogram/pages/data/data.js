@@ -49,6 +49,7 @@ Page({
     time: now.getTime(),
     bgcolor: "#000000",
     muted: true,
+    imgTran: ""
   },
   tabClick: function (e) {
     console.log(e)
@@ -85,14 +86,15 @@ Page({
       muted: !this.data.muted
     })
   },
-  translateEvent: function () {
-
+  translateEvent: function (e) {
+    this.setData({
+      imgTran: 'imgTran'
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**

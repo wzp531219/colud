@@ -9,6 +9,7 @@ Page({
     nickName: "用户未登陆",
     city: "未知",
     imgurl: "",
+    fileUrl:''
   },
   getUserInfomation: function (event) {
     console.log('getUserInfomation打印的事件对象', event)
@@ -20,22 +21,31 @@ Page({
       avatarUrl, city, nickName
     })
   },
+  uploadimg() {
+    wx.cloud.callFunction({
+      name: 'uploadimg',
+      success: res => {
+        console.log(res)
+      }
+    })
+  },
   chooseImg: function () {
     wx.chooseImage({
       count: 1,
       sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
-      success:  (res)=> {
+      success: (res) => {
         console.log(res)
         const filePath = res.tempFilePaths[0];
         // const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0];
 
         const cloudPath = `cloudbase/${Date.now()}-${Math.floor(Math.random(0, 1) * 1000)}` + filePath.match(/\.[^.]+?$/)[0];
+        console.log(cloudPath, filePath )
         wx.cloud.uploadFile({
           cloudPath,
           filePath,
           success: res => {
-            console.log('上传成功后获得的res：', res)       
+            console.log('上传成功后获得的res：', res)
             const imgurl = res.fileID
             this.setData({
               imgurl
@@ -43,6 +53,31 @@ Page({
           },
         })
         console.log(res.tempFilePaths)
+      }
+    })
+  },
+  chooseMsgFile() {
+    wx.chooseMessageFile({
+      count: 1,
+      type: 'video',
+      success:(res) => {
+        // tempFilePath可以作为img标签的src属性显示图片
+        const filePath = res.tempFiles[0].path
+        console.log(res)
+        const cloudPath = `cloudbase/${Date.now()}-${Math.floor(Math.random(0, 1) * 1000)}` + filePath.match(/\.[^.]+?$/)[0]
+        console.log(cloudPath, filePath)
+        wx.cloud.uploadFile({
+          cloudPath,
+          filePath,
+          success: res => {
+            console.log('上传成功后获得的res：', res)
+            const fileUrl = res.fileID
+            this.setData({
+              fileUrl
+            })
+          },
+
+        })
       }
     })
   },

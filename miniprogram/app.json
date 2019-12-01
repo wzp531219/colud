@@ -22,7 +22,8 @@
     "pages/location/location",
     "pages/utils/utils",
     "pages/login/login",
-    "pages/data/data"
+    "pages/data/data",
+    "pages/lifecyle/lifecyle"
 
   ],
   "window": {
